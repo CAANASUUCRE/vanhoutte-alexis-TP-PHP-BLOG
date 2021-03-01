@@ -10,3 +10,5 @@ Installer des composants pour le projet
 ## Expliquer le fichier .env
 Fichier où toutes les variables d'environnement sont initialisés
 
+## Explisquer pourquoi il faut changer le connecteur à la BDD 
+Pour choisir quel type de bdd on utilise (sqlite,postgresql,mysql...)
