@@ -12,3 +12,6 @@ Fichier où toutes les variables d'environnement sont initialisés
 
 ## Explisquer pourquoi il faut changer le connecteur à la BDD 
 Pour choisir quel type de bdd on utilise (sqlite,postgresql,mysql...)
+
+## Intérêt des migrations d'une BDD
+Lorsqu'on change les relations ou les entités, les migrations mettent à jour la structure de la BDD.
