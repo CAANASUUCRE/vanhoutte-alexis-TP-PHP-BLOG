@@ -5,7 +5,7 @@ TP3 symfony
 Installer des composants pour le projet
 
 ## Relations entres les entités
-![alt text](https://cdn.discordapp.com/attachments/675774899226279939/815878173866721300/unknown.png)
+![alt text](https://cdn.discordapp.com/attachments/766338117615353878/815886747493859348/unknown.png)
 
 ## Expliquer le fichier .env
 Fichier où toutes les variables d'environnement sont initialisés
