@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostController!{% endblock %}
+
+{% block body %}
+
+<h1>Post</h1>
+{% for post in allPosts %}
+<div class="article">
+  <h3>Title : {{ post.title }}</h3>
+
+  <a href="{{ path('post_show', {'id': post.id}) }}" class="btn-primary">Lire le Post</a>
+</div>
+
+
+{% endfor %}
+<h1>Créer un post</h1>
+<a href="{{ path('post_create') }}" class="btn-primary">Créer un Post</a>
+{% endblock %}

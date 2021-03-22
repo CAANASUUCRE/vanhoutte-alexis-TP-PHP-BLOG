@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\CommentRepository;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -45,7 +46,7 @@ class Comment
      private $author;
 
 
-    public function getPostComment(): Post
+    public function getPostComment(): ?Post
     {
         return $this->postComment;
     }
@@ -62,7 +63,7 @@ class Comment
         return $this->id;
     }
 
-    public function getAuthor(): User
+    public function getAuthor(): ?User
     {
         return $this->author;
     }

@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PostRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -47,20 +49,60 @@ class Post
     */
     private $commentPost;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $title;
 
 
-    public function getCommentPost(): Comment
+    public function __construct()
+    {
+        $this->commentPost = new ArrayCollection();
+    }
+
+    /**
+     * @return Collection|Comment[]
+     */
+    public function getCommentPost(): Collection
     {
         return $this->commentPost;
     }
 
-
-    public function setCommentPost(Comment $commentPost): void
+    public function addComment(Comment $comment): self
     {
-        $this->commentPost = $commentPost;
+        if (!$this->commentPost->contains($comment)) {
+            $this->commentPost[] = $comment;
+            $comment->setPost($this);
+        }
+
+        return $this;
     }
 
-    public function getAuthor(): User
+    public function removeComment(Comment $comment): self
+    {
+        if ($this->commentPost->removeElement($comment)) {
+            // set the owning side to null (unless already changed)
+            if ($comment->getPost() === $this) {
+                $comment->setPost(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+    // public function getCommentPost(): Comment
+    // {
+    //     return $this->commentPost;
+    // }
+    //
+    //
+    // public function setCommentPost(Comment $commentPost): void
+    // {
+    //     $this->commentPost = $commentPost;
+    // }
+
+    public function getAuthor(): ?User
     {
       return $this->author;
     }
@@ -119,6 +161,26 @@ class Post
     public function setIsDeleted(bool $isDeleted): self
     {
         $this->isDeleted = $isDeleted;
+
+        return $this;
+    }
+
+    /**
+     * Méthode toString. Retourne le title de l'article.
+     */
+    public function __toString(): string
+    {
+        return $this->title;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
 
         return $this;
     }
