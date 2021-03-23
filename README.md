@@ -41,23 +41,23 @@ On peut appliquer un thème :
 
 ## Définir les termes suivants : Encoder, Provider, Firewall, Access Control, Role, Voter 
 
-Encoder : Composant permettant de choisir l'algorithme d'encodage
-Provider : Pour l'authentification par exemple, le Provider va checker si l'utilisateur est présent dans la base de données pour ensuite le connecter
-Firewall : C'est ce qui permet de sécuriser le site, restreindre l'accés a certaines parties du site lors de l'authentification
-Access Control : C'est ce qui gère les autorisation, supprimer un Post si on est admin par exemple.
-Role : Permet d'attribuer des roles aux utilisateurs. Par exemple le role Administrateur avec ROLE_ADMIN
-Voter : Cela permet de vérifier les permissions d'un utilisateur
+Encoder : Composant permettant de choisir l'algorithme d'encodage<br/>
+Provider : Pour l'authentification par exemple, le Provider va checker si l'utilisateur est présent dans la base de données pour ensuite le connecter<br/>
+Firewall : C'est ce qui permet de sécuriser le site, restreindre l'accés a certaines parties du site lors de l'authentification<br/>
+Access Control : C'est ce qui gère les autorisation, supprimer un Post si on est admin par exemple.<br/>
+Role : Permet d'attribuer des roles aux utilisateurs. Par exemple le role Administrateur avec ROLE_ADMIN<br/>
+Voter : Cela permet de vérifier les permissions d'un utilisateur<br/>
 
 ## Qu'est-ce que FOSUserBundle ? Pourquoi ne pas l'utiliser ? 
-FOSUserBundle permet de gérer les utilisateur plus facilement.
-On ne l'utilise pas car ce bundle n'est pas obligatoire pour gérer les utilisateurs
+FOSUserBundle permet de gérer les utilisateur plus facilement.<br/>
+On ne l'utilise pas car ce bundle n'est pas obligatoire pour gérer les utilisateurs<br/>
 
 ## Définir les termes suivants : Argon2i, Bcrypt, Plaintext, BasicHTTP 44
 
-Argon2i : Fonction de dérivation de clé. Permet de crypter une chaine de caractère
-Bcrypt : Fonction de hachage. Permet de crypter une chaine de caractère
-Plaintext : Plaintext veut dire "texte en clair".
-BasicHTTP : Validation des requêtes HTTP
+Argon2i : Fonction de dérivation de clé. Permet de crypter une chaine de caractère<br/>
+Bcrypt : Fonction de hachage. Permet de crypter une chaine de caractère<br/>
+Plaintext : Plaintext veut dire "texte en clair".<br/>
+BasicHTTP : Validation des requêtes HTTP<br/>
 
 ## Expliquer le principe de hachage. 
 
@@ -72,23 +72,23 @@ C'est une classe qui va gérer "une tâche globale", par exemple envoyer un mail
 Oui, L'envoie de mail.
 
 ## Définir les termes suivant : Dependency Injection, Service, Autowiring, Container
-Dependency Injection : Cela va créer des dépendances entre les classes.
-Service : C'est une classe qui va gérer "une tâche globale", par exemple envoyer un mail.
-Autowiring : Permet de lier des services à des méthodes automatiquement.
-Container : Un Container permet de rendre un service plus facile a utiliser et favorise une architecture forte, en y proposant le choix des arguments
+Dependency Injection : Cela va créer des dépendances entre les classes.<br/>
+Service : C'est une classe qui va gérer "une tâche globale", par exemple envoyer un mail.<br/>
+Autowiring : Permet de lier des services à des méthodes automatiquement.<br/>
+Container : Un Container permet de rendre un service plus facile a utiliser et favorise une architecture forte, en y proposant le choix des arguments<br/>
 
 ## Quelle importance a les services dans le fonctionnement de Symfony ? 
 
 
 ## À quoi sert le validateur ? Dans quel contexte peut-on valider des données ?
-Valider le bon remplissage d'un formulaire.
-On peut valider les données lorsque l'utilisateur rempli correctement les champs.
+Valider le bon remplissage d'un formulaire.<br/>
+On peut valider les données lorsque l'utilisateur rempli correctement les champs.<br/>
 
 ## Quels sont les différentes parties du Serializer et à quoi servent-elles ? 
 
-Dans le serializer, il y a des normalizer et des encoders :
-Normalizer : cela sert a transformer des objets en tableau et vice-versa.
-Encoders : JsonEncoder,XmlEncoder etc...
+Dans le serializer, il y a des normalizer et des encoders :<br/>
+Normalizer : cela sert a transformer des objets en tableau et vice-versa.<br/>
+Encoders : JsonEncoder,XmlEncoder etc...<br/>
 
 
 
